@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shelters",
+  "info": {
+    "singularName": "shelter",
+    "pluralName": "shelters",
+    "displayName": "Shelters"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "text",
+      "required": true
+    },
+    "dogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dog.dog",
+      "mappedBy": "shelter"
+    }
+  }
+}
